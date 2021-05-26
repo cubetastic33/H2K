@@ -1,0 +1,93 @@
+/* System dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #212121;
+        --foreground: #ffffff;
+        --accent: #ffe082;
+        --accent-hover: #fcd253;
+        --accent-foreground: #212121;
+        --disabled: #ffffff;
+        --disabled-inner: #212121;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #ffffff;
+        --foreground: #000000;
+        --accent: #fcd253;
+        --accent-hover: #ffe082;
+        --accent-foreground: #212121;
+        --disabled: #cacaca;
+        --disabled-inner: #212121;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: sans-serif;
+}
+
+header {
+    border-bottom: 1px solid var(--foreground);
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+form {
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+form > span {
+    font-size: 1rem;
+}
+
+#rules > div {
+    display: grid;
+    grid-template-columns: 15% 1% 45% 1% 16% 16% 6%;
+    margin: .75em 0;
+}
+
+.header div:not(:first-child) {
+    text-align: center;
+}
+
+#rules > div > *:nth-child(2) {
+    grid-column: 3;
+}
+
+#rules > div > *:nth-child(3) {
+    grid-column: 5;
+}
+
+.delete {
+    cursor: pointer;
+    margin: auto;
+}
+
+.delete svg {
+    fill: var(--foreground);
+    height: 30px;
+    width: 30px;
+}
+
+.delete:hover svg {
+    fill: #f41a4d;
+}
+
+#toast {
+    display: none;
+    background-color: #111111;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px 0px 6px 2px rgba(15, 15, 15, 1);
+    color: #FFFFFF;
+    padding: 0.75rem 1rem;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}

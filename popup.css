@@ -1,0 +1,52 @@
+/* System dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #212121;
+        --foreground: #ffffff;
+        --accent: #ffe082;
+        --accent-hover: #fcd253;
+        --accent-foreground: #212121;
+        --disabled: #ffffff;
+        --disabled-inner: #212121;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #ffffff;
+        --foreground: #000000;
+        --accent: #fcd253;
+        --accent-hover: #ffe082;
+        --accent-foreground: #212121;
+        --disabled: #cacaca;
+        --disabled-inner: #212121;
+    }
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: sans-serif;
+    margin: 1em;
+    max-width: 280px;
+}
+
+span {
+    font-size: .9em;
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 130px;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.flex button:first-child {
+    margin-right: 1em;
+}

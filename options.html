@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H2K Settings</title>
+    <link rel="shortcut icon" href="/icons/h2k-48.png">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <header>
+        H2K Settings
+    </header>
+    <form>
+        <span>
+            <b>Note:</b> You can press ctrl + shift + F (command + shift + F on mac) to run the conversion on a webpage at any time, and ctrl + shift + V (command + shift + V on mac) to reload a webpage without converting. These shortcuts can be changed in the browser's extension settings.
+        </span>
+        <h2>Defaults</h2>
+        <div>
+            <input type="checkbox" id="startup" class="switch">
+            <label for="startup">Run on startup</label>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="update" class="switch">
+            <label for="update">Run on content update</label>
+        </div>
+        <br>
+        <div>
+            Mode:
+            <select id="mode">
+                <option value="h2k">Hiragana to Katakana</option>
+                <option value="k2h">Katakana to Hiragana</option>
+            </select>
+        </div>
+        <h2>Overrides</h2>
+        <div id="rules">
+            <div class="header">
+                <div>URLs</div>
+                <div></div>
+                <div>Startup</div>
+                <div>Content update</div>
+            </div>
+        </div>
+        <button id="add" type="button">+ New Rule</button>
+        <br><br><hr><br>
+        <button id="save" type="submit">Save</button>
+    </form>
+    <div id="toast"></div>
+</body>
+<script src="browser-polyfill.min.js"></script>
+<script src="options.js"></script>
+</html>

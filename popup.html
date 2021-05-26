@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <span>Note: these settings might not apply to the current webpage if you've added an override</span>
+    <br><br>
+    <div>
+        <input type="checkbox" id="startup" class="switch input">
+        <label for="startup">Run on startup</label>
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" id="update" class="switch input">
+        <label for="update">Run on content update</label>
+    </div>
+    <br>
+    <div>
+        Mode:
+        <select id="mode" class="input">
+            <option value="h2k">Hiragana to Katakana</option>
+            <option value="k2h">Katakana to Hiragana</option>
+        </select>
+    </div>
+    <br>
+    <div class="flex">
+        <button id="reload">Disable & reload</button>
+        <button id="convert">Convert now</button>
+    </div>
+    <br>
+    <button id="more">More options</button>
+</body>
+<script src="browser-polyfill.min.js"></script>
+<script src="popup.js"></script>
+</html>

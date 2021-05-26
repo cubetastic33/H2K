@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+    "name": "H2K",
+    "description": "Converts text on a webpage between hiragana and katakana.",
+    "version": "1.1",
+
+    "background": {
+        "scripts": [
+            "browser-polyfill.min.js",
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icons/h2k-48.png",
+        "default_title": "H2K",
+        "default_popup": "popup.html"
+    },
+    "commands": {
+        "convert": {
+            "suggested_key": {"default": "Ctrl+Shift+F"},
+            "description": "Run the conversion on the webpage"
+        },
+        "reload_disabled": {
+            "suggested_key": {"default": "Ctrl+Shift+V"},
+            "description": "Reload the webpage without converting"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "browser-polyfill.min.js",
+                "h2k.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "icons/h2k-16.png",
+        "48": "icons/h2k-48.png",
+        "128": "icons/h2k-128.png"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": false,
+        "open_in_tab": true
+    },
+    "permissions": ["storage"]
+}

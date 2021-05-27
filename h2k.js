@@ -40,34 +40,21 @@ function convert(from, to, from_regex) {
 }
 
 const observer = new MutationObserver(list => {
-    list.forEach(mutation => {
-        if (mutation.target.nodeType === Node.TEXT_NODE) {
-            let text = mutation.target.data;
-            if (text.match(from_regex)) {
-                for (let i = 0; i < from.length; i++) {
-                    // Replace the `from` character with the `to` one
-                    text = text.replaceAll(from[i], to[i]);
-                }
-                // Update the DOM with the new text
-                mutation.target.textContent = text;
-            }
-        } else {
-            if (mutation.target.textNodes) {
-                mutation.target.textNodes().forEach(node => {
-                    let text = node.data;
-                    if (text.match(from_regex)) {
-                        for (let i = 0; i < from.length; i++) {
-                            // Replace the `from` character with the `to` one
-                            text = text.replaceAll(from[i], to[i]);
-                        }
-                        // Update the DOM with the new text
-                        node.textContent = text;
+    if (document.body.innerText.match(from_regex)) {
+        list.forEach(mutation => {
+            if (mutation.target.nodeType === Node.TEXT_NODE) {
+                let text = mutation.target.data;
+                if (text.match(from_regex)) {
+                    for (let i = 0; i < from.length; i++) {
+                        // Replace the `from` character with the `to` one
+                        text = text.replaceAll(from[i], to[i]);
                     }
-                });
-            }
-            mutation.target.querySelectorAll("*").forEach(elem => {
-                if (elem.textNodes) {
-                    elem.textNodes().forEach(node => {
+                    // Update the DOM with the new text
+                    mutation.target.textContent = text;
+                }
+            } else {
+                if (mutation.target.textNodes) {
+                    mutation.target.textNodes().forEach(node => {
                         let text = node.data;
                         if (text.match(from_regex)) {
                             for (let i = 0; i < from.length; i++) {
@@ -79,9 +66,24 @@ const observer = new MutationObserver(list => {
                         }
                     });
                 }
-            });
-        }
-    });
+                mutation.target.querySelectorAll("*").forEach(elem => {
+                    if (elem.textNodes) {
+                        elem.textNodes().forEach(node => {
+                            let text = node.data;
+                            if (text.match(from_regex)) {
+                                for (let i = 0; i < from.length; i++) {
+                                    // Replace the `from` character with the `to` one
+                                    text = text.replaceAll(from[i], to[i]);
+                                }
+                                // Update the DOM with the new text
+                                node.textContent = text;
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
 });
 
 // Function to parse hostname from a URL

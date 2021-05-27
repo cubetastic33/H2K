@@ -28,7 +28,7 @@ body {
     color: var(--foreground);
     font-family: sans-serif;
     margin: 1em;
-    max-width: 280px;
+    max-width: 300px;
 }
 
 span {
@@ -38,7 +38,7 @@ span {
 button {
     display: block;
     margin: auto;
-    width: 130px;
+    width: 150px;
 }
 
 .flex {

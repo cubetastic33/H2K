@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "H2K",
     "description": "Converts text on a webpage between hiragana and katakana.",
-    "version": "1.1",
+    "version": "1.2",
 
     "background": {
         "scripts": [

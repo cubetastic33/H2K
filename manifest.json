@@ -17,7 +17,7 @@
     },
     "commands": {
         "convert": {
-            "suggested_key": {"default": "Ctrl+Shift+F"},
+            "suggested_key": {"default": "Ctrl+Shift+U"},
             "description": "Run the conversion on the webpage"
         },
         "reload_disabled": {

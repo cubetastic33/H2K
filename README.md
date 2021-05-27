@@ -1,7 +1,7 @@
 # H2K
 If you're learning Japanese, you'll probably notice that your katakana reading speed is slower than your hiragana reading speed, due to a lack of practice. This extension fixes that by letting you convert hiragana on a webpage to katakana. It also lets you do the reverse, which can be helpful if you don't know katakana yet.
 
-H2K's functionality is customizable - you can make it run by default on all webpages with Japanese text on both the initial load and whenever the content updates, or you can disable them selectively. You can also add overrides for specific websites - for example, you can disable H2K entirely on one website, and enable conversion on the initial load alone on another.
+H2K's functionality is customizable - you can make it run by default on all webpages on both the initial load and whenever the content updates, or you can disable them selectively. You can also add overrides for specific websites - for example, you can disable H2K entirely on one website, and enable conversion on the initial load alone on another.
 
 ## Installation
 

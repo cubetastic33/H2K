@@ -18,6 +18,9 @@ For Chrome, Brave, Edge, Vivaldi, and other Chromium-based browsers, you can ins
 + Click on the 'Load unpacked' button
 + Select the folder with the source code
 
+Here's a GIF demonstrating the process, along with how to change the default keyboard shortcuts. The GIF uses chrome, but the process is the same on brave, opera, and other chromium-based browsers.
+![GIF showing installation process on chrome](./screenshots/installing_h2k.gif)
+
 **Firefox**
 + Download the source code of this repo
 + For the storage functions to work, you need to specify an add-on ID, so open the `manifest.json` file and add something this with any ID you want:

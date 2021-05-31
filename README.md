@@ -5,7 +5,7 @@ H2K's functionality is customizable - you can make it run by default on all webp
 
 ## Installation
 
-For firefox, you can install it from the firefox [add-ons site](1).
+For firefox, you can install it from the firefox [add-ons site](https://addons.mozilla.org/en-US/firefox/addon/h2k).
 
 For Chrome, Brave, Edge, Vivaldi, and other Chromium-based browsers, you can install from source using the instructions below.
 
@@ -35,8 +35,6 @@ Here's a GIF demonstrating the process, along with how to change the default key
 + Click on 'This Firefox' in the left sidebar
 + Click on the 'Load Temporary Add-on...' button
 + Select any file inside the source code folder
-
-[1]: https://addons.mozilla.org/en-US/firefox/addon/h2k/
 
 ## Screenshots
 
